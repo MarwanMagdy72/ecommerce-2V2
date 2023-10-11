@@ -9,6 +9,7 @@ import jwtDecode from "jwt-decode";
 import Popup from "reactjs-popup";
 
 export default function NavBar() {
+
   let { isLogin, setIsLogin } = useContext(UserToken);
   const navigate = useNavigate();
   let { numOfCartItems   } = useContext(CartContext);
@@ -16,8 +17,13 @@ export default function NavBar() {
 
 
   useEffect(() => {
-    const res = jwtDecode(localStorage.getItem("UserToken"));
-    setUserName(res.name);
+    
+    if(localStorage.getItem("UserToken")){
+
+      const res = jwtDecode(localStorage.getItem("UserToken"));
+      setUserName(res.name);
+
+    }
   }, []);
 
 

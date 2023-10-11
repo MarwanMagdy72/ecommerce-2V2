@@ -6,10 +6,14 @@ export default function AllOrders() {
   let [userOrders, setUserOrders] = useState(null);
   let [userName, setUserName] = useState(null);
 
+
   useEffect(() => {
-    const res = jwtDecode(localStorage.getItem("UserToken"));
-    getUserOrders(res.id);
-    setUserName(res.name);
+    if(localStorage.getItem("UserToken")){
+      const res = jwtDecode(localStorage.getItem("UserToken"));
+      getUserOrders(res.id);
+      setUserName(res.name);
+    }
+
   
 
   }, []);
