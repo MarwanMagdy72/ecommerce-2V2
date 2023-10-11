@@ -4,12 +4,12 @@ import React, { useEffect, useState } from "react";
 import PageLoading from "./../Loading/PageLoading";
 export default function AllOrders() {
   let [userOrders, setUserOrders] = useState(null);
-  // let [userName, setUserName] = useState(null);
+  let [userName, setUserName] = useState(null);
 
   useEffect(() => {
-    // const res = jwtDecode(localStorage.getItem("UserToken"));
+    const res = jwtDecode(localStorage.getItem("UserToken"));
     getUserOrders(res.id);
-    // setUserName(res.name);
+    setUserName(res.name);
   
 
   }, []);
@@ -30,7 +30,7 @@ export default function AllOrders() {
   } else {
     return (
       <>
-        {/* <h1 className="text-center fw-bold"> Hello {userName} </h1> */}
+        <h1 className="text-center fw-bold"> Hello {userName} </h1>
         <div className="row">
           <div className="col-md-12">
             {userOrders.map((order, index) => (

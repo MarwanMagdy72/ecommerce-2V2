@@ -12,13 +12,13 @@ export default function NavBar() {
   let { isLogin, setIsLogin } = useContext(UserToken);
   const navigate = useNavigate();
   let { numOfCartItems   } = useContext(CartContext);
-  // let [userName, setUserName] = useState(null);
+  let [userName, setUserName] = useState(null);
 
 
-  // useEffect(() => {
-  //   const res = jwtDecode(localStorage.getItem("UserToken"));
-  //   setUserName(res.name);
-  // }, []);
+  useEffect(() => {
+    const res = jwtDecode(localStorage.getItem("UserToken"));
+    setUserName(res.name);
+  }, []);
 
 
   function LogOut() {
@@ -164,7 +164,7 @@ export default function NavBar() {
                         </div>
 
                         <div className="name text-center fw-bold ">
-                          {/* <span className="fa-2x text-center fw-bold ">{userName}</span> */}
+                          <span className="fa-2x text-center fw-bold ">{userName}</span>
                         </div>
 
 
@@ -181,7 +181,7 @@ export default function NavBar() {
                       )}
                     </Popup>
 
-                    {/* <span className="fw-bold text-success">{userName}</span> */}
+                    <span className="fw-bold text-success">{userName}</span>
                   </div>
                   <li className="nav-item">
                     <span
