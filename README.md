@@ -43,8 +43,8 @@ I invite you to check out and experience the magic for yourself.
 
 ## Links
 
-- [GitHub Repository](https://lnkd.in/dpbCd4wH)
-- [Demo](https://lnkd.in/dtPPzMmB)
+- [GitHub Repository]([https://lnkd.in/dpbCd4wH](https://github.com/MarwanMagdy72/ecommerceApp-2))
+- [Demo]([https://lnkd.in/dtPPzMmB](https://freshcart-nsx8.onrender.com/))
 
 ---
 
